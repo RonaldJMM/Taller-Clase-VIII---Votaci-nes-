@@ -39,109 +39,109 @@ public class Candidato extends Partido{
     
     /*get y set de atributos*/
     
-    public void setNombres(){
     
-        
-       
+    public String getNombres() {
+        return this.nombres;
+    }
+
+    
+   
+   
+    public void setNombres(String _nombres) {
+        this.nombres = _nombres;
     }
 
     /**
      * @return the apellidos
      */
     public String getApellidos() {
-        return apellidos;
+        return this.apellidos;
     }
 
     /**
      *
+     * @param _apellidos
      */
-    public void setApellidos(String apellidos) {
-        this.apellidos = apellidos;
+    public void setApellidos(String _apellidos) {
+        this.apellidos = _apellidos;
     }
 
     /**
      * @return the edad
      */
     public byte getEdad() {
-        return edad;
+        return this.edad;
     }
 
     /**
-     * @param edad the edad to set
+     * @param _edad the edad to set
      */
-    public void setEdad(byte edad) {
-        this.edad = edad;
+    public void setEdad(byte _edad) {
+        this.edad = _edad;
     }
 
     /**
      * @return the telefono
      */
     public long getTelefono() {
-        return telefono;
+        return this.telefono;
     }
 
     /**
-     * @param telefono the telefono to set
+     * @param _telefono
+     
      */
-    public void setTelefono(long telefono) {
-        this.telefono = telefono;
+    public void setTelefono(long _telefono) {
+        this.telefono = _telefono;
     }
 
     /**
      * @return the direccion
      */
     public String getDireccion() {
-        return direccion;
+        return this.direccion;
     }
 
     /**
-     * @param direccion the direccion to set
+     * @param _direccion
      */
-    public void setDireccion(String direccion) {
-        this.direccion = direccion;
+    public void setDireccion(String _direccion) {
+        this.direccion = _direccion;
     }
 
     /**
      * @return the ciudadNacimiento
      */
     public String getCiudadNacimiento() {
-        return ciudadNacimiento;
+        return this.ciudadNacimiento;
     }
 
     /**
-     * @param ciudadNacimiento the ciudadNacimiento to set
+     *
+     * @param _ciudadNacimiento
      */
-    public void setCiudadNacimiento(String ciudadNacimiento) {
-        this.ciudadNacimiento = ciudadNacimiento;
+    public void setCiudadNacimiento(String _ciudadNacimiento) {
+        this.ciudadNacimiento = _ciudadNacimiento;
     }
 
     /**
      * @return the numeroVotos
      */
     public int getNumeroVotos() {
-        return numeroVotos;
+        return this.numeroVotos;
     }
 
     /**
-     * @param numeroVotos the numeroVotos to set
+     * @param _numeroVotos
      */
-    public void setNumeroVotos(int numeroVotos) {
-        this.numeroVotos = numeroVotos;
+    public void setNumeroVotos(int _numeroVotos) {
+        this.numeroVotos = _numeroVotos;
     }
 
     /**
      * @return the nombres
      */
-    public String getNombres() {
-        return nombres;
-    }
-
-    /**
-     * @param nombres the nombres to set
-     */
-    public void setNombres(String nombres) {
-        this.nombres = nombres;
-    }
+    
     
     
     
