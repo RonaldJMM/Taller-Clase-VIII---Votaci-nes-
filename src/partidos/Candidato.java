@@ -40,8 +40,16 @@ public class Candidato extends Partido{
         ;
     }
   
-
+  
+     public void visualizarCandidato(){
      
+           System.out.println("...................................");
+           System.out.println("El nombre del candidato es: "+this.nombres);
+         
+     
+     
+     
+     }
     
     
     /*get y set de atributos*/

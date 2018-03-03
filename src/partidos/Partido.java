@@ -17,6 +17,8 @@ public class Partido {
     static int liberal=2_000_000;
     static int verde=1_000_000;
     static int mira=500_000;
+    
+    
     public Partido(String _nombrePartido , int _totalVotos){
         this.nombrePartido=_nombrePartido;
         
