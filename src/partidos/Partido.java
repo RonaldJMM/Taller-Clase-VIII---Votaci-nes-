@@ -13,7 +13,10 @@ public class Partido {
     private String nombrePartido;
     private int gastoCampaña;
     private int totalVotos;
-    
+    static int polo=3_000_000;
+    static int liberal=2_000_000;
+    static int verde=1_000_000;
+    static int mira=500_000;
     public Partido(String _nombrePartido , int _totalVotos){
         this.nombrePartido=_nombrePartido;
         

@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package partidos;
+
 import java.math.BigDecimal;
 /**
  *
@@ -23,15 +24,12 @@ public class Candidato extends Partido{
     private int gastoVotos=0;
     private String partido;
     
-    static int polo=3_000_000;
-    static int liberal=2_000_000;
-    static int verde=1_000_000;
-    static int mira=500_000;
+    
     /*constructor*/
 
     public Candidato(String _nombrePartido, int _totalVotos) {
         super(_nombrePartido, _totalVotos);
-        this.partido=_nombrePartido;
+        this.setTotalVotos(_totalVotos);
     }
     
     
@@ -39,10 +37,11 @@ public class Candidato extends Partido{
         this.gastoVotos=(this.numeroVotosInternet*10_000)+(this.numeroVotosTelevision*200_000)+(this.numeroVotosRadio*150_000);
         polo+=this.gastoVotos;
         System.out.println("Total polo: "+polo);
+        ;
     }
   
 
-    
+     
     
     
     /*get y set de atributos*/
