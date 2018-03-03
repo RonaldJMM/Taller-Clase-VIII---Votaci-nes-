@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package candidatos;
+package partidos;
 
 /**
  *
  * @author Ronald
  */
-public class Candidatos {
+public class Partido {
     
 }
