@@ -11,7 +11,6 @@ import java.math.BigDecimal;
  */
 public class Partido {
     private String nombrePartido;
-    private int gastoCampaña;
     private int totalVotos;
     static int polo=3_000_000;
     static int liberal=2_000_000;
@@ -39,20 +38,7 @@ public class Partido {
     public String getNombrePartido(){
         return this.nombrePartido;
     }
-    /**
-     * Introduce el gasto total de la campaña.
-     * @param _gastoCampaña 
-     */
-    public void setGastoCampaña(int _gastoCampaña){
-        this.gastoCampaña=_gastoCampaña;
-    }
-    /**
-     * Retorna el gasto de la campaña.
-     * @return gastoCampaña
-     */
-    public int getGastoCampaña(){
-        return this.gastoCampaña;
-    }
+   
     /**
      * Introduce el total de votos del partido.
      * @param _totalVotos 

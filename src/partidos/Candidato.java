@@ -6,6 +6,7 @@
 package partidos;
 
 import java.math.BigDecimal;
+import java.util.Scanner;
 /**
  *
  * @author Ronald
@@ -14,15 +15,14 @@ public class Candidato extends Partido{
     /*atributos*/
     private String nombres;
     private String apellidos;
-    private int edad;
+    private int edad=0;
     private long telefono;
     private String direccion;
     private String ciudadNacimiento;
     private int numeroVotosTelevision=0;
     private int numeroVotosRadio=0;
-    private int numeroVotosInternet=1;
+    private int numeroVotosInternet=0;
     private int gastoVotos=0;
-    private String partido;
     
     
     /*constructor*/
@@ -48,11 +48,45 @@ public class Candidato extends Partido{
            System.out.println("El apellido:"+this.apellidos);
            System.out.println("Edad: "+this.edad);
            System.out.println("Ciudad de nacimiento:  "+this.ciudadNacimiento);
-           System.out.println("Partido Politico: "+this.partido);
+           System.out.println("Partido Politico: "+this.getNombrePartido());
            System.out.println("...................................");
+     }
      
-     
-     
+     public void votarCandidato(){
+         
+         
+         Scanner lecturaVar = new Scanner(System.in);/*funcion para escanear el dato del usuario*/
+            byte opcionMenu;/*variable para la opcion del menu*/
+            do{/*repeticion del menu */
+            System.out.println("Medios");
+            System.out.println("1.Television 2.Radio 3.Internet");
+            System.out.println("Porque medio se entero del candidato?:");
+
+            opcionMenu = lecturaVar.nextByte();/**escaneo del dato del menu del usuario*/
+            switch(opcionMenu){
+
+                case 1:
+                    this.numeroVotosTelevision++;
+                    break;
+
+                case 2:
+                    this.numeroVotosRadio++;
+                   break;
+
+                case 3:
+                    this.numeroVotosInternet++;
+                   break;
+                   
+                default:/**
+                        *opcion no valida del menu.
+                        * 
+                        * */
+                    System.out.println("Opcion no valida en el menu.");
+                    break;
+            }
+
+            }while(opcionMenu!=1 && opcionMenu!=2 && opcionMenu!=3);
+         
      }
     
     
