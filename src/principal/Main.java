@@ -4,7 +4,8 @@
  * and open the template in the editor.
  */
 package principal;
-
+import partidos.Partido;
+import partidos.Candidato;
 /**
  *
  * @author Ronald
