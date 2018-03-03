@@ -9,6 +9,6 @@ package partidos;
  *
  * @author Ronald
  */
-public class Candidato {
+public class Candidato extends Partido{
     
 }
