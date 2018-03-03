@@ -45,7 +45,11 @@ public class Candidato extends Partido{
      
            System.out.println("...................................");
            System.out.println("El nombre del candidato es: "+this.nombres);
-         
+           System.out.println("El apellido:"+this.apellidos);
+           System.out.println("Edad: "+this.edad);
+           System.out.println("Ciudad de nacimiento:  "+this.ciudadNacimiento);
+           System.out.println("Partido Politico: "+this.partido);
+           System.out.println("...................................");
      
      
      
