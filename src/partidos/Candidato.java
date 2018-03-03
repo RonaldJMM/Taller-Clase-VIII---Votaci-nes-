@@ -10,5 +10,5 @@ package partidos;
  * @author Ronald
  */
 public class Candidato extends Partido{
-    
+    private String cedula;
 }
