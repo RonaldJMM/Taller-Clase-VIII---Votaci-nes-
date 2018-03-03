@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package partidos;
-
+import java.math.BigDecimal;
 /**
  *
  * @author Ronald
@@ -13,28 +13,36 @@ public class Candidato extends Partido{
     /*atributos*/
     private String nombres;
     private String apellidos;
-    private byte edad;
+    private int edad;
     private long telefono;
     private String direccion;
     private String ciudadNacimiento;
-    private int numeroVotos;
+    private int numeroVotosTelevision=0;
+    private int numeroVotosRadio=0;
+    private int numeroVotosInternet=1;
+    private int gastoVotos=0;
+    private String partido;
     
+    static int polo=3_000_000;
+    static int liberal=2_000_000;
+    static int verde=1_000_000;
+    static int mira=500_000;
     /*constructor*/
 
-    public Candidato(String _nombrePartido, int _gastoCampaña, int _totalVotos,String _nombres,String _apellidos, byte _edad,long _telefono,String _direccion, String _ciudadNacimiento,int _numeroVotos) {
-        super(_nombrePartido, _gastoCampaña, _totalVotos);
-        this.nombres=_nombres;
-        this.apellidos=_apellidos;
-        this.edad=_edad;
-        this.telefono=_telefono;
-        this.direccion=_direccion;
-        this.ciudadNacimiento=_ciudadNacimiento;
-        this.numeroVotos=_numeroVotos;
-        
-        
-        
-        
+    public Candidato(String _nombrePartido, int _totalVotos) {
+        super(_nombrePartido, _totalVotos);
+        this.partido=_nombrePartido;
     }
+    
+    
+    public void calculoVotos(){
+        this.gastoVotos=(this.numeroVotosInternet*10_000)+(this.numeroVotosTelevision*200_000)+(this.numeroVotosRadio*150_000);
+        polo+=this.gastoVotos;
+        System.out.println("Total polo: "+polo);
+    }
+  
+
+    
     
     
     /*get y set de atributos*/
@@ -69,14 +77,14 @@ public class Candidato extends Partido{
     /**
      * @return the edad
      */
-    public byte getEdad() {
+    public int getEdad() {
         return this.edad;
     }
 
     /**
      * @param _edad the edad to set
      */
-    public void setEdad(byte _edad) {
+    public void setEdad(int _edad) {
         this.edad = _edad;
     }
 
@@ -124,19 +132,7 @@ public class Candidato extends Partido{
         this.ciudadNacimiento = _ciudadNacimiento;
     }
 
-    /**
-     * @return the numeroVotos
-     */
-    public int getNumeroVotos() {
-        return this.numeroVotos;
-    }
-
-    /**
-     * @param _numeroVotos
-     */
-    public void setNumeroVotos(int _numeroVotos) {
-        this.numeroVotos = _numeroVotos;
-    }
+    
 
     /**
      * @return the nombres

@@ -4,8 +4,9 @@
  * and open the template in the editor.
  */
 package principal;
-import partidos.Partido;
+import java.math.BigDecimal;
 import partidos.Candidato;
+import partidos.Partido;
 /**
  *
  * @author Ronald
@@ -16,7 +17,11 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
-    }
-    
+      
+        Candidato candidato1 = new Candidato("Polo",3);
+        Candidato candidato2 = new Candidato("Pol",4);
+        
+        candidato1.calculoVotos();
+        candidato2.calculoVotos();
+}
 }

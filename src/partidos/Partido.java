@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package partidos;
-
+import java.math.BigDecimal;
 /**
  *
  * @author Ronald
@@ -14,9 +14,9 @@ public class Partido {
     private int gastoCampaña;
     private int totalVotos;
     
-    Partido(String _nombrePartido, int _gastoCampaña, int _totalVotos){
+    public Partido(String _nombrePartido , int _totalVotos){
         this.nombrePartido=_nombrePartido;
-        this.gastoCampaña=_gastoCampaña;
+        
         this.totalVotos=_totalVotos;
     }
     
