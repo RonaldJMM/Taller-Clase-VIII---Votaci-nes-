@@ -38,7 +38,7 @@ public class Candidato extends Partido{
         this.telefono=_telefono;
         this.direccion=_direccion;
         this.ciudadNacimiento=_ciudadNacimiento;
-        this.numeroVotosInternet=_numeroVotosTelevision;
+        this.numeroVotosTelevision=_numeroVotosTelevision;
         this.numeroVotosRadio=_numeroVotosRadio;
         this.numeroVotosInternet=_numeroVotosInternet;
         this.totalVotos=_totalVotos;
@@ -138,7 +138,10 @@ public class Candidato extends Partido{
         
         
     }
-    
+    public void visualizacionVotosCandidato(){
+        System.out.println("El total de votos del cantidato "+this.getNombres()+" "+this.getApellidos()+" del partido "+this.getNombrePartido()+" es: "+this.getTotalVotos());
+
+    }
     public void visualizacionGastoCandidato(){
         System.out.println("El gasto por votaciones del candidato "+this.getNombres()+" "+this.getApellidos()+" del partido "+this.getNombrePartido()+" es de: $"+this.getGastoCandidato());
     }
