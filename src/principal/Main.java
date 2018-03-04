@@ -34,6 +34,7 @@ public class Main {
         Candidato candidato8 = new Candidato("Mira","Camilo", "Cifuentes Chacon","107423937468", 41, 320894567, "Cra 2 No.13-45", "La Mesa", 0, 0, 0, 0, 0);
         Candidato candidato9 = new Candidato("Mira","Carlos", "Morales Sulega","10743457568", 49, 320894567, "Cra 13 No.56-13", "Subachoque", 0, 0, 0, 0, 0);
         
+        
         Scanner lecturaVar = new Scanner(System.in);/*funcion para escanear el dato del usuario*/
         byte opcionMenu;/*variable para la opcion del menu*/
         do{/*repeticion del menu */
