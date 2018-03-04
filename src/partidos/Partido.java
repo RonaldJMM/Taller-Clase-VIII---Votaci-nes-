@@ -24,7 +24,12 @@ public class Partido {
         this.nombrePartido=_nombrePartido;
         
     }
-    
+    public void visualizacionGastoPartido(){
+        System.out.println("El gasto por el partido Polo es de: $"+gastoPartidoPolo);
+        System.out.println("El gasto por el partido Liberal es de: $"+gastoPartidoLiberal);
+        System.out.println("El gasto por el partido Verde es de: $"+gastoPartidoVerde);
+        System.out.println("El gasto por el partido Mira es de: $"+gastoPartidoMira);
+    }
     /**
      * Introduce el nombre del partido.
      * @param _nombrePartido 

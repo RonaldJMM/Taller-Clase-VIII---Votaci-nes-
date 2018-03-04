@@ -29,19 +29,23 @@ public class Candidato extends Partido{
     
     /*constructor*/
 
-    public Candidato(String _nombrePartido) {
+    public Candidato(String _nombrePartido,String _nombres,String _apellidos,String _documento,int _edad, long _telefono,String _direccion, String _ciudadNacimiento,int _numeroVotosTelevision, int _numeroVotosRadio,int _numeroVotosInternet,int _totalVotos, int _gastoCandidato) {
         super(_nombrePartido);
+        this.nombres=_nombres;
+        this.apellidos=_apellidos;
+        this.Documento=_documento;
+        this.edad=_edad;
+        this.telefono=_telefono;
+        this.direccion=_direccion;
+        this.ciudadNacimiento=_ciudadNacimiento;
+        this.numeroVotosInternet=_numeroVotosTelevision;
+        this.numeroVotosRadio=_numeroVotosRadio;
+        this.numeroVotosInternet=_numeroVotosInternet;
+        this.totalVotos=_totalVotos;
+        this.gastoCandidato=_gastoCandidato;
     }
     
     
-    public void calculoVotos(){
-        this.setGastoCandidato((this.getNumeroVotosInternet()*10_000)+(this.getNumeroVotosTelevision()*200_000)+(this.getNumeroVotosRadio()*150_000));
-        gastoPartidoPolo+=this.getGastoCandidato();
-        System.out.println("Total polo: "+gastoPartidoPolo);
-        ;
-    }
-  
-  
      public void visualizarCandidato(){
      
            System.out.println("...................................");
@@ -106,9 +110,38 @@ public class Candidato extends Partido{
             if(this.getNombrePartido()=="Mira"){
                 totalVotosMira++;
             }
+            
+            calculoGasto();
      }
     
+    public void calculoGasto(){
+        if (this.getNombrePartido()== "Polo"){
+            gastoPartidoPolo-=this.getGastoCandidato();
+            this.setGastoCandidato((this.getNumeroVotosInternet()*10_000)+(this.getNumeroVotosTelevision()*200_000)+(this.getNumeroVotosRadio()*150_000));
+            gastoPartidoPolo+=this.getGastoCandidato();
+        }
+        if (this.getNombrePartido()== "Liberal"){
+            gastoPartidoLiberal-=this.getGastoCandidato();
+            this.setGastoCandidato((this.getNumeroVotosInternet()*10_000)+(this.getNumeroVotosTelevision()*200_000)+(this.getNumeroVotosRadio()*150_000));
+            gastoPartidoLiberal+=this.getGastoCandidato();
+        }
+        if (this.getNombrePartido()== "Verde"){
+            gastoPartidoVerde-=this.getGastoCandidato();
+            this.setGastoCandidato((this.getNumeroVotosInternet()*10_000)+(this.getNumeroVotosTelevision()*200_000)+(this.getNumeroVotosRadio()*150_000));
+            gastoPartidoVerde+=this.getGastoCandidato();
+        }
+        if (this.getNombrePartido()== "Mira"){
+            gastoPartidoMira-=this.getGastoCandidato();
+            this.setGastoCandidato((this.getNumeroVotosInternet()*10_000)+(this.getNumeroVotosTelevision()*200_000)+(this.getNumeroVotosRadio()*150_000));
+            gastoPartidoMira+=this.getGastoCandidato();
+        }
+        
+        
+    }
     
+    public void visualizacionGastoCandidato(){
+        System.out.println("El gasto por votaciones del candidato "+this.getNombres()+" "+this.getApellidos()+" del partido "+this.getNombrePartido()+" es de: $"+this.getGastoCandidato());
+    }
     /*get y set de atributos*/
     
     

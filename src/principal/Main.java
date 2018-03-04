@@ -19,11 +19,8 @@ public class Main {
      */
     public static void main(String[] args) {
       
-        Candidato candidato1 = new Candidato("Polo");
-        Candidato candidato2 = new Candidato("Polo");
         
-        candidato1.calculoVotos();
-        candidato2.calculoVotos();
+        
         
         Scanner lecturaVar = new Scanner(System.in);/*funcion para escanear el dato del usuario*/
         byte opcionMenu;/*variable para la opcion del menu*/
@@ -44,7 +41,7 @@ public class Main {
             
             case 1:
                
-                candidato1.visualizarCandidato();
+                
                 
                 break;
             
