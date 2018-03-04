@@ -54,7 +54,8 @@ public class Main {
                break;
                
             case 3:
-                
+               
+                menuVotos();
                
                break;
                
@@ -174,4 +175,58 @@ public class Main {
 
 /*--------------------------------------------------------------------------*/
     }
+    
+    public static void menuVotos(){
+         Scanner lecturaVar = new Scanner(System.in);/*funcion para escanear el dato del usuario*/
+            byte opcionMenu;
+        
+         do{/*repeticion del menu */
+             System.out.println("......................"); 
+            System.out.println("RESULTADOS DE VOTACION");
+             System.out.println("......................");
+            System.out.println("1.Votos por Candidato.");
+            System.out.println("2.Votos por partido ");
+             System.out.println(".....................");
+             System.out.println("Digite la opcion correspondiente :");
+
+            opcionMenu = lecturaVar.nextByte();/**escaneo del dato del menu del usuario*/
+            switch(opcionMenu){
+
+                case 1:
+                   
+                    
+                    break;
+
+                case 2:
+                   
+                    
+                   break;
+
+                
+                   
+                default:/**
+                        *opcion no valida del menu.
+                        * 
+                        * */
+                    System.out.println("Opcion no valida en el menu.");
+                    break;
+            }
+
+            }while(opcionMenu!=1 && opcionMenu!=2 );
+
+
+        
 }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+}
+
+
