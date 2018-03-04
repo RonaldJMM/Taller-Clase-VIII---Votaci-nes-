@@ -9,8 +9,13 @@ import java.math.BigDecimal;
 import java.util.Scanner;
 /**
  *
- * @author Ronald
+ * @author Ronald Jefrey Moreno Mora
+ * @author Luis Miguel Morales Sandoval
+ * Programacion II
+ * SIS 301
+ * Universidad de Cundinamarca - Facatativa
  */
+
 public class Candidato extends Partido{
     /*atributos*/
     private String nombres;
@@ -28,7 +33,22 @@ public class Candidato extends Partido{
     
     
     /*constructor*/
-
+    /**
+     * 
+     * @param _nombrePartido
+     * @param _nombres
+     * @param _apellidos
+     * @param _documento
+     * @param _edad
+     * @param _telefono
+     * @param _direccion
+     * @param _ciudadNacimiento
+     * @param _numeroVotosTelevision
+     * @param _numeroVotosRadio
+     * @param _numeroVotosInternet
+     * @param _totalVotos
+     * @param _gastoCandidato 
+     */
     public Candidato(String _nombrePartido,String _nombres,String _apellidos,String _documento,int _edad, long _telefono,String _direccion, String _ciudadNacimiento,int _numeroVotosTelevision, int _numeroVotosRadio,int _numeroVotosInternet,int _totalVotos, int _gastoCandidato) {
         super(_nombrePartido);
         this.nombres=_nombres;
@@ -45,7 +65,9 @@ public class Candidato extends Partido{
         this.gastoCandidato=_gastoCandidato;
     }
     
-    
+    /**
+     * visualiza los datos de los candidatos.
+     */
      public void visualizarCandidato(){
      
            System.out.println("...................................");
@@ -60,7 +82,9 @@ public class Candidato extends Partido{
            System.out.println("Partido Politico: "+this.getNombrePartido());
            System.out.println("...................................");
      }
-     
+     /**
+      * Se realiza la votacion del candidato.
+      */
      public void votarCandidato(){
          
          
@@ -113,7 +137,9 @@ public class Candidato extends Partido{
             
             calculoGasto();
      }
-    
+    /**
+     * Se calcula los gasto de los partidos y los candidatos.
+     */
     public void calculoGasto(){
         if (this.getNombrePartido()== "Polo"){
             gastoPartidoPolo-=this.getGastoCandidato();
@@ -138,89 +164,115 @@ public class Candidato extends Partido{
         
         
     }
+    /**
+     * Muestra los votos de los candidatos.
+     */
     public void visualizacionVotosCandidato(){
         System.out.println("El total de votos del cantidato "+this.getNombres()+" "+this.getApellidos()+" del partido "+this.getNombrePartido()+" es: "+this.getTotalVotos());
 
     }
+    /**
+     * Muestra los gastos de los candidatos.
+     */
     public void visualizacionGastoCandidato(){
         System.out.println("El gasto por votaciones del candidato "+this.getNombres()+" "+this.getApellidos()+" del partido "+this.getNombrePartido()+" es de: $"+this.getGastoCandidato());
     }
-    /*get y set de atributos*/
     
+    /*get y set de atributos*/
+    /**
+     * Muestra del dato.
+     * @return nombres
+     */
     
     public String getNombres() {
         return this.nombres;
     }
 
     
-   
+   /**
+    * Captura el dato.
+    * @param _nombres 
+    */
    
     public void setNombres(String _nombres) {
         this.nombres = _nombres;
     }
 
     /**
-     * @return the apellidos
+     * Muestra del dato.
+     * @return apellidos
      */
     public String getApellidos() {
         return this.apellidos;
     }
 
     /**
-     *
+     *Captura el dato.
      * @param _apellidos
      */
     public void setApellidos(String _apellidos) {
         this.apellidos = _apellidos;
     }
     
+    /**
+     * Muestra del dato.
+     * @return numero documento de identificacion
+     */
     public String getDocumento() {
         return this.Documento;
     }
 
     
-   
+   /**
+    * Captura el dato
+    * @param _documento 
+    */
    
     public void setDocumento(String _documento) {
         this.Documento = _documento;
     }
     /**
-     * @return the edad
+     * Muestra del dato.
+     * @return edad
      */
     public int getEdad() {
         return this.edad;
     }
 
     /**
-     * @param _edad the edad to set
+     * Captura el dato.
+     * @param _edad
      */
     public void setEdad(int _edad) {
         this.edad = _edad;
     }
 
     /**
-     * @return the telefono
+     * Muestra del dato.
+     * @return telefono
      */
     public long getTelefono() {
         return this.telefono;
     }
 
     /**
+     * Captura el dato.
      * @param _telefono
-     
      */
     public void setTelefono(long _telefono) {
         this.telefono = _telefono;
     }
 
     /**
-     * @return the direccion
+     * Muestra del dato.
+     * @return direccion
      */
     public String getDireccion() {
         return this.direccion;
     }
 
     /**
+     * Captura el dato.
      * @param _direccion
      */
     public void setDireccion(String _direccion) {
@@ -228,14 +280,15 @@ public class Candidato extends Partido{
     }
 
     /**
-     * @return the ciudadNacimiento
+     * Muestra del dato.
+     * @return ciudad de nacimiento
      */
     public String getCiudadNacimiento() {
         return this.ciudadNacimiento;
     }
 
     /**
-     *
+     *Captura el dato.
      * @param _ciudadNacimiento
      */
     public void setCiudadNacimiento(String _ciudadNacimiento) {
@@ -243,83 +296,83 @@ public class Candidato extends Partido{
     }
 
     /**
-     * @return the numeroVotosTelevision
+     * Muestra del dato.
+     * @return numero de votos realizados por el medio de television
      */
     public int getNumeroVotosTelevision() {
         return numeroVotosTelevision;
     }
 
     /**
-     * @return the numeroVotosRadio
+     * Muestra del dato.
+     * @return numero de votos realizados por el medio de radio
      */
     public int getNumeroVotosRadio() {
         return numeroVotosRadio;
     }
 
     /**
-     * @return the numeroVotosInternet
+     * Muestra del dato.
+     * @return numero de votos realizados por el medio de internet
      */
     public int getNumeroVotosInternet() {
         return numeroVotosInternet;
     }
 
     /**
-     * @param numeroVotosTelevision the numeroVotosTelevision to set
+     * Captura el dato.
+     * @param numeroVotosTelevision 
      */
     public void setNumeroVotosTelevision(int numeroVotosTelevision) {
         this.numeroVotosTelevision = numeroVotosTelevision;
     }
 
     /**
-     * @param numeroVotosRadio the numeroVotosRadio to set
+     * Captura el dato.
+     * @param numeroVotosRadio 
      */
     public void setNumeroVotosRadio(int numeroVotosRadio) {
         this.numeroVotosRadio = numeroVotosRadio;
     }
 
     /**
-     * @param numeroVotosInternet the numeroVotosInternet to set
+     * Captura el dato.
+     * @param numeroVotosInternet 
      */
     public void setNumeroVotosInternet(int numeroVotosInternet) {
         this.numeroVotosInternet = numeroVotosInternet;
     }
 
     /**
-     * @return the totalVotos
+     * Muestra del dato.
+     * @return total de votos del candidato
      */
     public int getTotalVotos() {
         return totalVotos;
     }
 
     /**
-     * @param totalVotos the totalVotos to set
+     * Captura el dato.
+     * @param totalVotos 
      */
     public void setTotalVotos(int totalVotos) {
         this.totalVotos = totalVotos;
     }
 
     /**
-     * @return the gastoCandidato
+     * Muestra del dato.
+     * @return total gasto del candidato en la campaña
      */
     public int getGastoCandidato() {
         return gastoCandidato;
     }
 
     /**
-     * @param gastoCandidato the gastoCandidato to set
+     * Captura el dato.
+     * @param gastoCandidato 
      */
     public void setGastoCandidato(int gastoCandidato) {
         this.gastoCandidato = gastoCandidato;
     }
-
-    
-
-    /**
-     * @return the nombres
-     */
-    
-    
-    
-    
     
 }

@@ -7,7 +7,11 @@ package partidos;
 import java.math.BigDecimal;
 /**
  *
- * @author Ronald
+ * @author Ronald Jefrey Moreno Mora
+ * @author Luis Miguel Morales Sandoval
+ * Programacion II
+ * SIS 301
+ * Universidad de Cundinamarca - Facatativa
  */
 public class Partido {
     private String nombrePartido;
@@ -19,17 +23,26 @@ public class Partido {
     static int totalVotosLiberal=0;
     static int totalVotosVerde=0;
     static int totalVotosMira=0;
-    
+    /**
+     * Constructor.
+     * @param _nombrePartido 
+     */
     public Partido(String _nombrePartido){
         this.nombrePartido=_nombrePartido;
         
     }
+    /**
+     * Visualiza los votos del partido.
+     */
     public void visualizacionVotosPartido(){
         System.out.println("El total de votos del partido Polo es de: "+totalVotosPolo);
         System.out.println("El total de votos del partido Liberal es de: "+totalVotosLiberal);
         System.out.println("El total de votos del partido Verde es de: "+totalVotosVerde);
         System.out.println("El total de votos del partido Mira es de: "+totalVotosMira);
     }
+    /**
+     * Visualiza los gastos del partido.
+     */
     public void visualizacionGastoPartido(){
         System.out.println("El gasto por el partido Polo es de: $"+gastoPartidoPolo);
         System.out.println("El gasto por el partido Liberal es de: $"+gastoPartidoLiberal);
@@ -50,10 +63,5 @@ public class Partido {
     public String getNombrePartido(){
         return this.nombrePartido;
     }
-   
-    /**
-     * Introduce el total de votos del partido.
-     * @param _totalVotos 
-     */
    
 }
