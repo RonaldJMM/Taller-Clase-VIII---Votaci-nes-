@@ -11,17 +11,18 @@ import java.math.BigDecimal;
  */
 public class Partido {
     private String nombrePartido;
-    private int totalVotos;
-    static int polo=3_000_000;
-    static int liberal=2_000_000;
-    static int verde=1_000_000;
-    static int mira=500_000;
+    static int gastoPartidoPolo=3_000_000;
+    static int gastoPartidoLiberal=2_000_000;
+    static int gastoPartidoVerde=1_000_000;
+    static int gastoPartidoMira=500_000;
+    static int totalVotosPolo=0;
+    static int totalVotosLiberal=0;
+    static int totalVotosVerde=0;
+    static int totalVotosMira=0;
     
-    
-    public Partido(String _nombrePartido , int _totalVotos){
+    public Partido(String _nombrePartido){
         this.nombrePartido=_nombrePartido;
         
-        this.totalVotos=_totalVotos;
     }
     
     /**
@@ -43,14 +44,5 @@ public class Partido {
      * Introduce el total de votos del partido.
      * @param _totalVotos 
      */
-    public void setTotalVotos(int _totalVotos ){
-        this.totalVotos=_totalVotos;
-    }
-    /**
-     * Retorna el total de Votos de la campaña.
-     * @return  totalVotos
-     */
-    public int getTotalVotos(){
-        return this.totalVotos;
-    }
+   
 }

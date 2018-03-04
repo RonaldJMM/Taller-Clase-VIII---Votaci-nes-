@@ -15,6 +15,7 @@ public class Candidato extends Partido{
     /*atributos*/
     private String nombres;
     private String apellidos;
+    private String Documento;
     private int edad=0;
     private long telefono;
     private String direccion;
@@ -22,21 +23,21 @@ public class Candidato extends Partido{
     private int numeroVotosTelevision=0;
     private int numeroVotosRadio=0;
     private int numeroVotosInternet=0;
-    private int gastoVotos=0;
+    private int totalVotos=0;
+    private int gastoCandidato=0;
     
     
     /*constructor*/
 
-    public Candidato(String _nombrePartido, int _totalVotos) {
-        super(_nombrePartido, _totalVotos);
-        this.setTotalVotos(_totalVotos);
+    public Candidato(String _nombrePartido) {
+        super(_nombrePartido);
     }
     
     
     public void calculoVotos(){
-        this.gastoVotos=(this.numeroVotosInternet*10_000)+(this.numeroVotosTelevision*200_000)+(this.numeroVotosRadio*150_000);
-        polo+=this.gastoVotos;
-        System.out.println("Total polo: "+polo);
+        this.setGastoCandidato((this.getNumeroVotosInternet()*10_000)+(this.getNumeroVotosTelevision()*200_000)+(this.getNumeroVotosRadio()*150_000));
+        gastoPartidoPolo+=this.getGastoCandidato();
+        System.out.println("Total polo: "+gastoPartidoPolo);
         ;
     }
   
@@ -44,10 +45,14 @@ public class Candidato extends Partido{
      public void visualizarCandidato(){
      
            System.out.println("...................................");
-           System.out.println("El nombre del candidato es: "+this.nombres);
-           System.out.println("El apellido:"+this.apellidos);
-           System.out.println("Edad: "+this.edad);
-           System.out.println("Ciudad de nacimiento:  "+this.ciudadNacimiento);
+           System.out.println("//Datos del Candidato//");
+           System.out.println("Nombres: "+this.getNombres());
+           System.out.println("Apellidos: "+this.getApellidos());
+           System.out.println("Nº Documento: "+this.getDocumento());
+           System.out.println("Edad: "+this.getEdad());
+           System.out.println("Ciudad de Nacimiento:  "+this.getCiudadNacimiento());
+           System.out.println("Direccion: "+this.getDireccion());
+           System.out.println("Telefono: "+this.getTelefono());
            System.out.println("Partido Politico: "+this.getNombrePartido());
            System.out.println("...................................");
      }
@@ -66,15 +71,15 @@ public class Candidato extends Partido{
             switch(opcionMenu){
 
                 case 1:
-                    this.numeroVotosTelevision++;
+                    this.setNumeroVotosTelevision(this.getNumeroVotosTelevision()+1);
                     break;
 
                 case 2:
-                    this.numeroVotosRadio++;
+                    this.setNumeroVotosRadio(this.getNumeroVotosRadio()+1);
                    break;
 
                 case 3:
-                    this.numeroVotosInternet++;
+                    this.setNumeroVotosInternet(this.getNumeroVotosInternet()+1);
                    break;
                    
                 default:/**
@@ -86,7 +91,21 @@ public class Candidato extends Partido{
             }
 
             }while(opcionMenu!=1 && opcionMenu!=2 && opcionMenu!=3);
-         
+            
+            this.setTotalVotos(this.getTotalVotos() + 1);
+            
+            if(this.getNombrePartido()=="Polo"){
+                totalVotosPolo++;
+            }
+            if(this.getNombrePartido()=="Liberal"){
+                totalVotosLiberal++;
+            }
+            if(this.getNombrePartido()=="Verde"){
+                totalVotosVerde++;
+            }
+            if(this.getNombrePartido()=="Mira"){
+                totalVotosMira++;
+            }
      }
     
     
@@ -118,7 +137,17 @@ public class Candidato extends Partido{
     public void setApellidos(String _apellidos) {
         this.apellidos = _apellidos;
     }
+    
+    public String getDocumento() {
+        return this.Documento;
+    }
 
+    
+   
+   
+    public void setDocumento(String _documento) {
+        this.Documento = _documento;
+    }
     /**
      * @return the edad
      */
@@ -175,6 +204,76 @@ public class Candidato extends Partido{
      */
     public void setCiudadNacimiento(String _ciudadNacimiento) {
         this.ciudadNacimiento = _ciudadNacimiento;
+    }
+
+    /**
+     * @return the numeroVotosTelevision
+     */
+    public int getNumeroVotosTelevision() {
+        return numeroVotosTelevision;
+    }
+
+    /**
+     * @return the numeroVotosRadio
+     */
+    public int getNumeroVotosRadio() {
+        return numeroVotosRadio;
+    }
+
+    /**
+     * @return the numeroVotosInternet
+     */
+    public int getNumeroVotosInternet() {
+        return numeroVotosInternet;
+    }
+
+    /**
+     * @param numeroVotosTelevision the numeroVotosTelevision to set
+     */
+    public void setNumeroVotosTelevision(int numeroVotosTelevision) {
+        this.numeroVotosTelevision = numeroVotosTelevision;
+    }
+
+    /**
+     * @param numeroVotosRadio the numeroVotosRadio to set
+     */
+    public void setNumeroVotosRadio(int numeroVotosRadio) {
+        this.numeroVotosRadio = numeroVotosRadio;
+    }
+
+    /**
+     * @param numeroVotosInternet the numeroVotosInternet to set
+     */
+    public void setNumeroVotosInternet(int numeroVotosInternet) {
+        this.numeroVotosInternet = numeroVotosInternet;
+    }
+
+    /**
+     * @return the totalVotos
+     */
+    public int getTotalVotos() {
+        return totalVotos;
+    }
+
+    /**
+     * @param totalVotos the totalVotos to set
+     */
+    public void setTotalVotos(int totalVotos) {
+        this.totalVotos = totalVotos;
+    }
+
+    /**
+     * @return the gastoCandidato
+     */
+    public int getGastoCandidato() {
+        return gastoCandidato;
+    }
+
+    /**
+     * @param gastoCandidato the gastoCandidato to set
+     */
+    public void setGastoCandidato(int gastoCandidato) {
+        this.gastoCandidato = gastoCandidato;
     }
 
     
